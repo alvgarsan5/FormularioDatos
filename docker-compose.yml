@@ -3,7 +3,7 @@ version: '3.8'
 services:
   nginx:
     image: nginx:stable-alpine
-    container_name: web-server
+    container_name: FormularioDatos
     ports:
       - "8080:80"
     volumes:
@@ -16,6 +16,6 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    container_name: php-fpm
+    container_name: FormularioDatos-php-fpm
     volumes:
       - ./app:/var/www/html
