@@ -88,9 +88,11 @@
 $nombre = "";
 $apellidos = "";
 $password = "";
+$email = "";
 $confirmarPassword = "";
 $error_nombre = "";
 $error_password = "";
+$error_email = "";
 $pais = "";
 $fechaN = "";
 $error_apellidos = "";
@@ -116,6 +118,8 @@ if($_SERVER["REQUEST_METHOD"]== "POST"){
     }
     if (empty($password)) {
         $error_password = "La contraseña está vacía";
+    }elseif(mb_strlen($password) < 8){
+        $error_password = "la contraseña no tiene 8 carácteres"
     }
     if (empty($pais)) {
         $error_pais = "Debe seleccionar un país";
@@ -123,6 +127,13 @@ if($_SERVER["REQUEST_METHOD"]== "POST"){
     if (empty($fechaN)) {
         $error_fecha = "Debe seleccionar la fecha de nacimiento";
     }
+    if(empty($email)){
+        $error_email = "el email no puede estar vacío";
+    }elseif(!filter_var($email,FILTER_VALIDATE_EMAIL)){
+        $error_email = "el codigo no tiene el formato que pedimos.";
+    } 
+
+
 
 }
 
