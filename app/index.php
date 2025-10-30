@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-<link rel="stylesheet" href="estilos.css">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="estilo.css">
+
     <title>Document</title>
 </head>
 <body>
@@ -119,7 +118,7 @@ if($_SERVER["REQUEST_METHOD"]== "POST"){
     if (empty($password)) {
         $error_password = "La contraseña está vacía";
     }elseif(mb_strlen($password) < 8){
-        $error_password = "la contraseña no tiene 8 carácteres"
+        $error_password = "la contraseña no tiene 8 carácteres";
     }
     if (empty($pais)) {
         $error_pais = "Debe seleccionar un país";
