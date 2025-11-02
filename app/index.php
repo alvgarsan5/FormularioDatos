@@ -94,13 +94,13 @@ if($_SERVER["REQUEST_METHOD"]== "POST"){
                 <article>
                     <label for="nombre">Nombre</label>
                     <input type="text" name="nombre" id="nombre" placeholder="Nombre usuario" required>
-                     <span style="color:red;"><?php echo $error['nombre'] ?? ''; ?></span><br><br>
+                     <span style="color:red;"><?php echo $error['nombre'] ?? ''; ?></span>
                 </article>
 
                   <article>
                     <label for="Apellidos">Apellidos</label>
                     <input type="text" name="apellidos" id="apellidos" placeholder="Apellidos usuario" required>
-                     <span style="color:red;"><?php echo $error['apellidos'] ?? ''; ?></span><br><br>
+                     <span style="color:red;"><?php echo $error['apellidos'] ?? ''; ?></span>
                 </article>
 
                 
@@ -108,16 +108,15 @@ if($_SERVER["REQUEST_METHOD"]== "POST"){
                 <article>
                     <label for="email">Correo</label>
                     <input type="email" name="email" id="email" placeholder="Correo Electrónico Usuario" required >
-                     <span style="color:red;"><?php echo $error['email'] ?? ''; ?></span><br><br>
-                </article>
+                     <span style="color:red;"><?php echo $error['email'] ?? ''; ?></span>
 
                 <article>
                     <label for="password">Contraseña</label>
                     <input type="password" name="password" id="password" placeholder="Contraseña Usuario" required >
-                    <span style="color:red;"><?php echo $error['password'] ?? ''; ?></span><br><br>
+                    <span style="color:red;"><?php echo $error['password'] ?? ''; ?></span>
                      <label for="confirmarPassword">Confirmar Contraseña</label>
                     <input type="password" name="confirmarPassword" id="confirmarPassword" placeholder="Confirmar Contraseña" required >
-                    <span style="color:red;"><?php echo $error['confirmarPassword'] ?? ''; ?></span><br><br>
+                    <span style="color:red;"><?php echo $error['confirmarPassword'] ?? ''; ?></span>
 
                 </article>
 
@@ -136,12 +135,12 @@ if($_SERVER["REQUEST_METHOD"]== "POST"){
                             <option value="PT">Holanda</option>
                             <option value="IT">Inglaterra</option>
                     </select>
-                    <span style="color:red;"><?php echo $error['pais'] ?? ''; ?></span><br><br>
+                    <span style="color:red;"><?php echo $error['pais'] ?? ''; ?></span>
 
                     <article>
                         <label for="acepto">Acepto los términos y condiciones:</label>
                         <input type="checkbox" id="acepto" name="acepto" required>
-                         <span style="color:red;"><?php echo $error['acepto'] ?? ''; ?></span><br><br>
+                         <span style="color:red;"><?php echo $error['acepto'] ?? ''; ?></span>
                     </article>
                 </article>
 
